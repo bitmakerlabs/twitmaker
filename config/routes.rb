@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root 'tweets#index'
   resources :tweets, only: [:index, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
