@@ -1,3 +1,56 @@
 // Place all the styles related to the Tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: 40px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+  background-color: cadetblue;
+  text-align: center;
+  line-height: 40px;
+}
+
+.tweets {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tweet {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.tweet > p {
+  margin: 0 0 0.5em;
+}
