@@ -1,3 +1,12 @@
+<ul class="tweets">
+  <% @tweets.each do |tweet| %>
+    <li class="tweet">
+      <p><%= tweet.message %></p>
+      <time><%= tweet.created_at %></time>
+    </li>
+  <% end %>
+</ul>
+
 <%= form_for @tweet do |f| %>
   <%= f.text_field :message, placeholder: "What did you learn today?" %>
   <%= f.submit %>
