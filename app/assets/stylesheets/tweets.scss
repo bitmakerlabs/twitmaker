@@ -22,6 +22,7 @@ body {
 
 main {
   padding-top: 40px;
+  padding-bottom: 3rem;
 }
 
 header {
@@ -53,4 +54,37 @@ header {
 
 .tweet > p {
   margin: 0 0 0.5em;
+}
+
+.tweet > time {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+#new_tweet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  border-top: 1px solid #ccc;
+}
+
+#tweet_message {
+  float: left;
+  width: 80%;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 0;
+}
+
+input[type="submit"] {
+  float: left;
+  width: 20%;
+  border: 0;
+  background-color: cadetblue;
+  height: 3rem;
+  font-weight: bold;
+  font-size: 0.75rem;
 }
