@@ -36,5 +36,6 @@ Deleting code should bring joy to your life as a developer. It means there's les
 
 1. Submit the form when pressing `return`, but not when pressing `option-return`
 2. Add ability to delete a tweet via AJAX
-3. Allow users to like a Tweet via AJAX
-4. **Double Stretch!** Figure out how to use the [gemoji gem](https://github.com/github/gemoji) to add emoji to tweets and likes ([this link might help](https://www.reddit.com/r/rails/comments/38ir3m/how_exactly_do_you_add_emoji_to_a_rails_app_and/))
+3. Allow users to like a tweet via AJAX
+4. Display the tweet time in `Eastern Time (US & Canada)` (you can use `rake time:zones:all` to see all of the different time zones Rails knows about)
+5. **Double Stretch!** Figure out how to use the [gemoji gem](https://github.com/github/gemoji) to add emoji to tweets and likes ([this link might help](https://www.reddit.com/r/rails/comments/38ir3m/how_exactly_do_you_add_emoji_to_a_rails_app_and/))
