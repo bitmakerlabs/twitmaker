@@ -1,34 +1,45 @@
 # Adding AJAX Requests
 
-Bwitter is a simple Twitter clone that allows you to create tweets about what you've learned at Bitmaker.
+Twitmaker is a simple Twitter clone that allows you to create tweets about what you've learned at Bitmaker.
 
 It's super simple, just one model: Tweet. I've implemented the feature to create new tweets (with a little bit of styling), now it's your turn to update this code with AJAX goodness.
 
-This assignment will give you practice implementing AJAX requests both directly with jQuery and the Rails way. You'll also practice dealing with different response types.
+This assignment will give you practice implementing AJAX requests with jQuery. You'll also practice dealing with different response types.
+
+To get started, fork this repository.
+
 
 ## 1. jQuery AJAX request with HTML response
 
-Make a branch called `jquery-ajax-html`.
+Our first step will be to take our normal request-response cycle and update it to use an AJAX request. The benefit of doing this is that rather than re-rendering the entire page, including the head section, JavaScript, stylesheets and full layout, we'll only have to render the part of the page that changes.
 
-Using jQuery to initiate your AJAX request (using [`$.ajax`](http://api.jquery.com/jQuery.ajax/)) and update the list of tweets by adding the HTML response to the top.
+This makes your app snappier and more interactive for your users!
 
-To properly `POST` your form data via `$.ajax`, you'll want to call the [`.serialize`](http://api.jquery.com/serialize/) method on your form to get the data in the right format.
+#### It's Coding Time!
+Start by making a branch called `jquery-ajax-html`.
 
-## 2. jQuery AJAX request with JS response
+Use jQuery to send your AJAX request to the server (using [`$.ajax`](http://api.jquery.com/jQuery.ajax/)).
 
-Make a branch called `jquery-ajax-js`.
+To properly `POST` your form data via `$.ajax`, you'll want to call the [`.serialize`](http://api.jquery.com/serialize/) method on your form to get the data in the right format. [Check the docs for an example](http://api.jquery.com/serialize/).
 
-Now let's refactor the solution to accept a JavaScript response from the server. Remember that in this case the `dataType` attribute should be set to `script` (not `js`!).
+When the server receives the request to create a new Tweet, instead of redirecting the user back to the index view, it should respond with HTML that represents just the new Tweet.
 
-On the server you'll have to refactor your action so that it returns a JS view rather than HTML.
+Finally, use jQuery DOM manipulation to update the list of tweets by adding the HTML response from the server to the top.
 
-## 3. Rails `remote: true` AJAX request
 
-Make a branch called `rails-ajax`
+## 2. jQuery AJAX request with JSON response
 
-Finally, let's refactor the solution to use Rails' `remote: true` feature. When using `remote: true`, Rails sends a JS view as a response by default, so it should be pretty similar to the previous example, but with less code.
+Receiving HTML from the server is fine when you're the one writing the code on both the client and the server, since you know exactly what markup is required.
 
-Deleting code should bring joy to your life as a developer. It means there's less code to read and maintain later on!
+When we're dealing with more generic situations where we want to present the same data in different views or we're requesting data from a third-party service, receiving HTML as a response is really limiting. We may want to present the data differently than how the server is sending it to us!
+
+#### It's Coding Time!
+Start by making a branch called `jquery-ajax-json`.
+
+Let's refactor the solution to accept a JSON response from the server. Remember that in this case the `dataType` attribute of the `$.ajax` method should be set to `json` (not `js`!).
+
+On the server you'll have to refactor your action so that it returns JSON rather than HTML.
+
 
 ---
 
