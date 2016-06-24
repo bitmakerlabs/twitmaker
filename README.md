@@ -6,7 +6,7 @@ It's super simple, just one model: Tweet. I've implemented the feature to create
 
 This assignment will give you practice implementing AJAX requests with jQuery. You'll also practice dealing with different response types.
 
-To get started, fork this repository.
+**To get started, you can fork the Twitmaker repository here: https://github.com/bitmakerlabs/twitmaker**
 
 
 ## 1. jQuery AJAX request with HTML response
