@@ -9,7 +9,7 @@ This assignment will give you practice implementing AJAX requests with jQuery. Y
 **To get started, you can fork the Twitmaker repository here: https://github.com/bitmakerlabs/twitmaker**
 
 
-## 1. jQuery AJAX request with HTML response
+## Part 1: jQuery AJAX request with HTML response
 
 Our first step will be to take our normal request-response cycle and update it to use an AJAX request. The benefit of doing this is that rather than re-rendering the entire page, including the head section, JavaScript, stylesheets and full layout, we'll only have to render the part of the page that changes.
 
@@ -27,7 +27,7 @@ When the server receives the request to create a new Tweet, instead of redirecti
 Finally, use jQuery DOM manipulation to update the list of tweets by adding the HTML response from the server to the top.
 
 
-## 2. jQuery AJAX request with JSON response
+## Part 2: jQuery AJAX request with JSON response
 
 Receiving HTML from the server is fine when you're the one writing the code on both the client and the server, since you know exactly what markup is required.
 
