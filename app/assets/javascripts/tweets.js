@@ -8,9 +8,14 @@ $(function(){   //doc ready
 				url: $(this).attr('action'),
 				method: 'POST',
 				data: $(this).serialize(),
-				dataType: 'html'
+				dataType: 'json'
 			}).done(function(responseData){
-				$(responseData).prependTo('.tweets');
+				var twit = $('<li>').addClass('tweet')
+														.append('<p>' + responseData.message + '</p>')
+														.append('<time>' + responseData.created_at + '</time>')
+
+				$(twit).prependTo('.tweets');
+				$('#tweet_message').val('');
 			});
 	});// end of on submit
 }); //end doc ready
