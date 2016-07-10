@@ -1,6 +1,13 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-$(function(){   //doc ready
+$(function(){   //doc readyy
+
+	$('#new_tweet').keyup(function(event){
+		if(event.keyCode == 13){
+			$('#create-tweet').click();
+		}
+	});
+
 	$('#new_tweet').on('submit', function(event){
 		event.preventDefault();
 
