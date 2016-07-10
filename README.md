@@ -33,6 +33,7 @@ Receiving HTML from the server is fine when you're the one writing the code on b
 
 When we're dealing with more generic situations where we want to present the same data in different views or we're requesting data from a third-party service, receiving HTML as a response is really limiting. We may want to present the data differently than how the server is sending it to us!
 
+
 #### It's Coding Time!
 Start by making a branch called `jquery-ajax-json`.
 
