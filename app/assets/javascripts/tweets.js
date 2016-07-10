@@ -10,7 +10,6 @@ $(function(){   //doc ready
 				data: $(this).serialize(),
 				dataType: 'html'
 			}).done(function(responseData){
-				//console.log(responseData);
 				$(responseData).prependTo('.tweets');
 			});
 	});// end of on submit
