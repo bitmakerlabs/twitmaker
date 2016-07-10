@@ -15,7 +15,7 @@ Our first step will be to take our normal request-response cycle and update it t
 
 This makes your app snappier and more interactive for your users!
 
-#### It's Coding Time!
+#### It's Coding Time!!
 Start by making a branch called `jquery-ajax-html`.
 
 Use jQuery to send your AJAX request to the server (using [`$.ajax`](http://api.jquery.com/jQuery.ajax/)).
