@@ -16,7 +16,7 @@ Our first step will be to take our normal request-response cycle and update it t
 This makes your app snappier and more interactive for your users!
 
 #### It's Coding Time!
-Start by making a branch called `jquery-ajax-html`.
+Start by using git to branch off of `master` called `jquery-ajax-html`.
 
 Use jQuery to send your AJAX request to the server (using [`$.ajax`](http://api.jquery.com/jQuery.ajax/)).
 
@@ -34,7 +34,7 @@ Receiving HTML from the server is fine when you're the one writing the code on b
 When we're dealing with more generic situations where we want to present the same data in different views or we're requesting data from a third-party service, receiving HTML as a response is really limiting. We may want to present the data differently than how the server is sending it to us!
 
 #### It's Coding Time!
-Start by making a branch called `jquery-ajax-json`.
+Start by making a branch (off of `master`) called `jquery-ajax-json`.
 
 Let's refactor the solution to accept a JSON response from the server. Remember that in this case the `dataType` attribute of the `$.ajax` method should be set to `json` (not `js`!).
 
