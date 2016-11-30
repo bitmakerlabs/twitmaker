@@ -7,7 +7,7 @@
   <% end %>
 </ul>
 
-<%= form_for @tweet do |f| %>
+<%= form_for @tweet, html: {id: "tweet-form"} do |f| %>
   <%= f.text_area :message, placeholder: "What did you learn today?" %>
-  <%= f.submit "Tweet", id: "create-tweet" %>
+  <%= f.submit "Tweet", id: "create-tweet", data: { disable_with: false }  %>
 <% end %>
