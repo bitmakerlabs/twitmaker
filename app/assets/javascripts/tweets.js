@@ -9,7 +9,7 @@ $(function() {
       dataType: 'html',
       data: $(this).serialize()
     }).done(function(data) {
-      console.log(data);
+      $('.tweets').first().prepend(data);
     }).fail(function(error) {
       console.log(error);
     }).always();
