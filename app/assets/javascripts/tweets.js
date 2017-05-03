@@ -3,7 +3,16 @@
 $(function() {
   $('#new_tweet').on('submit', function(e) {
     e.preventDefault();
-    console.log(e);
+    $.ajax({
+      url: $(this).attr('action'),
+      method: $(this).attr('method'),
+      dataType: 'html',
+      data: $(this).serialize()
+    }).done(function(data) {
+      console.log(data);
+    }).fail(function(error) {
+      console.log(error);
+    }).always();
   });
 
 });
