@@ -15,6 +15,8 @@ $(function(){
       $('.tweets').prepend('<li>' + data.message + data.created_at + '</li>');
     }).fail(function(){
       console.log('FAILED');
-    });
+    }).always(function(){
+      $('#create-tweet').removeAttr('disabled')
+    })
   });
 });
