@@ -7,10 +7,28 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
 
-    if @tweet.save
-      redirect_to tweets_path
-    else
-      render :index
+    respond_to do |format|
+      format.html do
+        if request.xhr?
+          if @tweet.save
+            render partial: @tweet
+          end
+        else
+          if @tweet.save
+            redirect_to tweets_path
+          else
+            @tweets = Tweets.all.order(created_at: :desc)
+            render :index
+          end
+        end
+      end
+      format.js
+      format.json do
+        if @tweet.save
+          # render partial: 'tweet', locals: { tweet: @tweet }
+          render json: @tweet
+        end
+      end
     end
   end
 
