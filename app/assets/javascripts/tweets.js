@@ -3,17 +3,16 @@
 $(function(){
   $('#new_tweet').on('submit', function(event){
     event.preventDefault();
-    console.log($ (this).serialize()  );
 
     $.ajax({
       url: $(this).attr('action'),
       method: $(this).attr('method'),
       data: $(this).serialize(),
-      dataType: 'html'
+      dataType: 'json'
     }).done(function(data) {
-      debugger;
       console.log('done');
-      $('.tweets').prepend(data);
+      console.log(data);
+      $('.tweets').prepend('<li>' + data.message + data.created_at + '</li>');
     }).fail(function(){
       console.log('FAILED');
     });

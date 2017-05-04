@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
       format.html do
         if request.xhr?
           if @tweet.save
-            render partial: 'tweet', locals: { tweet: @tweet }
+            render partial: @tweet
           end
         else
           if @tweet.save
@@ -22,8 +22,10 @@ class TweetsController < ApplicationController
           end
         end
       end
+      format.js
       format.json do
         if @tweet.save
+          # render partial: 'tweet', locals: { tweet: @tweet }
           render json: @tweet
         end
       end

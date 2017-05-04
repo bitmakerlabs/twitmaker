@@ -1,13 +1,11 @@
 <ul class="tweets">
   <% @tweets.each do |tweet| %>
     <li class="tweet">
-      <p><%= tweet.message %></p>
-      <time><%= tweet.created_at.strftime('%b %e, %l:%M %p') %></time>
+      <%= render 'tweet', tweet: tweet %>
     </li>
   <% end %>
   <!-- <%= render @tweets %> -->
 </ul>
-
 <%= form_for @tweet do |f| %>
   <%= f.text_area :message, placeholder: "What did you learn today?" %>
   <%= f.submit "Tweet", id: "create-tweet" %>
